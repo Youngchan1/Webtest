@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+
+.fadeinleft {
+/*    opacity:0;*/
+    margin-left:-500px;    
+    max-width:100%;
+}
+#container {
+	width: 100%;
+	height: 2000px;
+	background-color: antiquewhite;
+}
+
+.top {
+	 position: fixed;
+  left: 50%;
+  bottom: 50px;
+}
