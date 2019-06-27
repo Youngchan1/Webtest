@@ -9,8 +9,29 @@
   src="https://code.jquery.com/jquery-3.4.1.js"
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
-			<script>
-		$(document).ready(function() {
+	<script src="vegas/vegas.min.js"></script>
+	<link rel="stylesheet" href="vegas/vegas.min.css">
+	<script> 
+		var filter = "win16|win32|win64|mac";
+		var isPC = false;
+ 	
+
+		if(navigator.platform){
+
+		if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+		console.log("모바일");
+		isPC = false;
+
+		}else{
+		console.log("데스크탑");
+		isPC = true;
+
+		}
+
+		}
+		
+	
+	/*	$(document).ready(function() {
 			$( '.top' ).click( function() {
 	$( 'html, body' ).animate( { scrollTop : 0 }, 400 );
 	return false;
@@ -34,24 +55,58 @@
 				
             
     });
-});
-			
-
+});*/
+		
+		$(document).ready(function() {
+		var duration = 300;
+		
+		var $sidebar = $('.sidebar');
+		var $sidebarButton = $sidebar.find('button').on('click', function(){
+			$sidebar.toggleClass('open');
+			if($sidebar.hasClass('open')){
+				console.log("2");
+				$sidebar.stop(true).animate({left: '-70px'},1000);
+				$sidebarButton.find('span').text('CLOSE');
+			}else{
+				console.log("1");
+				$sidebar.stop(true).animate({left: '-350px'},1500);
+				$sidebarButton.find('span').text('OPEN');
+			};
+		});
+	});
+		if(isPC){
+			$(function(){
+			console.log("5");
+			$('body').vegas({
+				slides:[
+					{src : 'img/main1.jpg'},
+					{src : 'img/main2.jpg'},
+					{src : 'img/main3.jpg'}
+					
+				],delay : 6000})
+			});
+		}
 	</script>
 </head>
 <body>
+	
+		
+	<div  class="logo"><img class="logoimg" src="img/현대 로고.png" width="150px;"></div>
+	
 
-	<div id="container">
-    
-    
-    
-</div>
-	<div style="width: 100%; height: 1000px;">
-	<div class="fadeinleft">Fade In</div>
-		<div class="fadeinleft">Fade In</div>
-		<div class="fadeinleft">Fade In</div>
-	<a href="" class="top">Top</a>
-	</div>
+	 <aside class="sidebar">
+        <div class="sidebar-content sidebermenu">
+            <nav class="sidenav">
+            	<ul>
+            		<li><a  href="#">HOME</a></li>
+					<li><a  href="#">INFO</a></li>
+					<li><a  href="#">PRICE</a></li>
+					<li><a  href="#">HELP</a></li>
+            	</ul>
+            </nav>
+        </div>
+        <button><span class="sidebar-btn">OPEN</span></button>
+    </aside>
 </body>
 
 </html>
