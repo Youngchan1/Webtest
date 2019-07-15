@@ -1,11 +1,10 @@
-/*jslint devel: true */var filter = "win16|win32|win64|mac";
-/* eslint-disable no-console */		var isPC = false;
+/*jslint devel: true */
+/* eslint-disable no-console */		
 /*eslint no-undef: "error"*/
-
 /*eslint-env node*/
 
- 	
-
+		var filter = "win16|win32|win64|mac";
+		var isPC = false;
 		if(navigator.platform){
 
 		if(0 > filter.indexOf(navigator.platform.toLowerCase())){
@@ -15,9 +14,8 @@
 		}else{
 		console.log("데스크탑");
 		isPC = true;
-
-		}
-
+			
+			}
 		}
 		
 	
@@ -48,7 +46,6 @@
 });*/
 		
 		$(document).ready(function() {
-		var duration = 300;
 		
 		var $sidebar = $('.sidebar');
 		var $sidebarButton = $sidebar.find('button').on('click', function(){
@@ -61,10 +58,9 @@
 				console.log("1");
 				$sidebar.stop(true).animate({left: '-300px'},1500);
 				$sidebarButton.find('span').text('OPEN');
-			};
+			}
 		});
 	});
-		if(isPC){
 			$(function(){
 			console.log("5");
 			$('.test').vegas({
@@ -75,4 +71,4 @@
 					
 				],delay : 6000})
 			});
-		}
+		
