@@ -1,36 +1,58 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
+	<meta charset="utf-8">
+	<!--no-cache-->
+	<meta http-equiv="cache-control" content="no-cache">
+
+	<!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-status-bar-style" content="blue">
+
+	<!-- ios홈화면추가시 상단 주소창 제거 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	
 <title>main</title>
-	<link rel="stylesheet" href="desain/main.css">
+	<!--angularJS-->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-	<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<!--자체 CSS 및 JS-->
+	<link rel="stylesheet" href="desain/main.css">
+	<script src="JavaScripts/main.js"></script>
+	
+	<!--vegas css and js-->
 	<script src="vegas/vegas.min.js"></script>
 	<link rel="stylesheet" href="vegas/vegas.min.css">
-	<script src="JavaScripts/main.js"></script>
+
 
 </head>
-<body ng-app="">
-	<div class="test"></div>
-	 <aside class="sidebar">
+<body ng-controller="main">
+	<div class="test">
+	<div  class="logo"><img class="logoimg" src="img/현대 로고.png" alt="로고" width="150px;"></div>
+	</div>
+		 <aside class="sidebar">
         <div class="sidebar-content sidebermenu">
             <nav class="sidenav">
             	<ul>
-            		<li><a  href="#">HOME</a></li>
-					<li><a  href="#">INFO</a></li>
-					<li><a  href="#">PRICE</a></li>
-					<li><a  href="#">HELP</a></li>
+            		<li><a class="sidebtn" onclick="viewpage(this)">HOME</a></li>
+					<li><a  class="sidebtn" onclick="viewpage(this)">INFO</a></li>
+					<li><a  class="sidebtn" onclick="viewpage(this)">PRICE</a></li>
+					<li><a  class="sidebtn" onclick="viewpage(this)">HELP</a></li>
             	</ul>
             </nav>
         </div>
         <button><span class="sidebar-btn">OPEN</span></button>
     </aside>
+
+
 </body>
 
 </html>

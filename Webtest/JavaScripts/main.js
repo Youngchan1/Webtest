@@ -2,7 +2,9 @@
 /* eslint-disable no-console */		
 /*eslint no-undef: "error"*/
 /*eslint-env node*/
+/* eslint-disable */
 
+						 
 		var filter = "win16|win32|win64|mac";
 		var isPC = false;
 		if(navigator.platform){
@@ -17,8 +19,7 @@
 			
 			}
 		}
-		
-	
+
 	/*	$(document).ready(function() {
 			$( '.top' ).click( function() {
 	$( 'html, body' ).animate( { scrollTop : 0 }, 400 );
@@ -44,7 +45,21 @@
             
     });
 });*/
-		
+
+		function viewpage(a){// eslint-disable-line no-unused-vars
+			var strtext = $(a).text();
+			if(strtext == "HOME"){
+				 $location.url('/main');
+			}else if(strtext == "INFO"){
+				 $location.url('/info');
+			}else if(strtext == "PRICE"){
+				console.log("11");
+			}else if(strtext == "HELP"){
+				console.log("aa");
+			}
+		}
+
+
 		$(document).ready(function() {
 		
 		var $sidebar = $('.sidebar');
@@ -62,7 +77,6 @@
 		});
 	});
 			$(function(){
-			console.log("5");
 			$('.test').vegas({
 				slides:[
 					{src : 'img/main1.jpg'},
@@ -71,4 +85,4 @@
 					
 				],delay : 6000})
 			});
-		
+	
