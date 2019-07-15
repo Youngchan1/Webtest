@@ -11,10 +11,10 @@
 			.when("/info",{
 				templateUrl : "apps/info.html"
 				})
-			.when("/main", {
-				templateUrl : "main.html"
+			.when("/price",{
+				templateUrl : "apps/info.html"
 				})
-			.when("/main", {
+			.when("/help", {
 				templateUrl : "main.html"
 				});
 	});

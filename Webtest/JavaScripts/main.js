@@ -49,9 +49,9 @@
 		function viewpage(a){// eslint-disable-line no-unused-vars
 			var strtext = $(a).text();
 			if(strtext == "HOME"){
-				 $location.url('/main');
+				  location.replace('main.html');
 			}else if(strtext == "INFO"){
-				 $location.url('/info');
+				  location.replace('apps/index.html');
 			}else if(strtext == "PRICE"){
 				console.log("11");
 			}else if(strtext == "HELP"){
@@ -85,4 +85,3 @@
 					
 				],delay : 6000})
 			});
-	
