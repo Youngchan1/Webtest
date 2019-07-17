@@ -1,6 +1,6 @@
 <!doctype html>
-<html>
-<head>
+<html ng-app="myApp">
+	<head>
 	<meta charset="utf-8">
 	<!--no-cache-->
 	<meta http-equiv="cache-control" content="no-cache">
@@ -8,13 +8,14 @@
 	<!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="mobile-web-app-status-bar-style" content="blue">
-
+ 
 	<!-- ios홈화면추가시 상단 주소창 제거 -->
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	
 <title>main</title>
 	<!--angularJS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 	
@@ -23,10 +24,13 @@
 
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 	
-	<!--자체 CSS 및 JS-->
+	<!--local CSS and JS-->
 	<link rel="stylesheet" href="desain/main.css">
-	<script src="JavaScripts/main.js"></script>
+	<script src="JavaScripts/app.js"></script>
+	<script src="JavaScripts/mainCtrl.js"></script>
+	
 	
 	<!--vegas css and js-->
 	<script src="vegas/vegas.min.js"></script>
@@ -34,24 +38,27 @@
 
 
 </head>
-<body ng-controller="main">
-	<div class="test">
+<body ng-controller="MainCtrl as hn">
+	<div class="test" ng-show="mainview">
 	<div  class="logo"><img class="logoimg" src="img/현대 로고.png" alt="로고" width="150px;"></div>
 	</div>
+	<ng-view></ng-view>
+	
+	
+	
 		 <aside class="sidebar">
         <div class="sidebar-content sidebermenu">
             <nav class="sidenav">
             	<ul>
-            		<li><a class="sidebtn" onclick="viewpage(this)">HOME</a></li>
-					<li><a  class="sidebtn" onclick="viewpage(this)">INFO</a></li>
-					<li><a  class="sidebtn" onclick="viewpage(this)">PRICE</a></li>
-					<li><a  class="sidebtn" onclick="viewpage(this)">HELP</a></li>
+            		<li><a class="sidebtn" onClick="viewpage()" href="#!home">HOME</a></li>
+					<li><a  class="sidebtn" onClick="viewpage()" href="#!info">INFO</a></li>
+					<li><a  class="sidebtn" onClick="viewpage()" href="#!home">PRICE</a></li>
+					<li><a  class="sidebtn" onClick="viewpage()" href="#!info">HELP</a></li>
             	</ul>
             </nav>
         </div>
         <button><span class="sidebar-btn">OPEN</span></button>
     </aside>
-
 
 </body>
 

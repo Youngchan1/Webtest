@@ -3,8 +3,14 @@
 /*eslint no-undef: "error"*/
 /*eslint-env node*/
 /* eslint-disable */
-
-						 
+'use strict';
+angular
+.module('myApp')
+.controller('MainCtrl', ['$http'
+                       , '$scope'
+                        , function ($http
+                                 , $scope) {
+	
 		var filter = "win16|win32|win64|mac";
 		var isPC = false;
 		if(navigator.platform){
@@ -19,47 +25,30 @@
 			
 			}
 		}
-
-	/*	$(document).ready(function() {
-			$( '.top' ).click( function() {
-	$( 'html, body' ).animate( { scrollTop : 0 }, 400 );
-	return false;
-} );
-			console.log(this);
-			var a = 1;
-			$(window).scroll( function(){
-					var top_margin = $(window).scrollTop();
-				
-				console.log(a);
-					console.log(top_margin);
-					if(a == 1 && top_margin >= 801 ){
-						console.log("g");
-						$('.fadeinleft').animate({'opacity':"1",'margin-left': "300px"}, 1000);
-						a=2;
-					}else if(a == 2 && top_margin <=800){
-				console.log("z");
-					$('.fadeinleft').animate({'opacity':"0",'margin-left': "0px"}, 1000);
-						a=1;
-						}
-				
-            
-    });
-});*/
-
-		function viewpage(a){// eslint-disable-line no-unused-vars
+		$scope.firstName = "John";
+    	$scope.lastName = "Doe";
+	
+		self.viewpage = viewpagehn;
+		$scope.mainview = true;
+		function viewpagehn(a){// eslint-disable-line no-unused-vars
 			var strtext = $(a).text();
+			console.log("ga");
 			if(strtext == "HOME"){
-				  location.replace('main.html');
+				mainview = true;
+				console.log(mainview);
+				
 			}else if(strtext == "INFO"){
-				  location.replace('apps/index.html');
+				mainview = false;  
 			}else if(strtext == "PRICE"){
-				console.log("11");
+				mainview = false;
 			}else if(strtext == "HELP"){
-				console.log("aa");
+				mainview = false;
 			}
 		}
 
-
+		function mainview(){
+			 $location.url('/Main');
+		}
 		$(document).ready(function() {
 		
 		var $sidebar = $('.sidebar');
@@ -85,3 +74,4 @@
 					
 				],delay : 6000})
 			});
+}]);

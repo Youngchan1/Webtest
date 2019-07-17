@@ -2,19 +2,18 @@
 /* eslint-disable no-console */		
 /*eslint no-undef: "error"*/
 /* eslint-disable */
-	var app = angular.module("app",["ngRoute"]);
-	app.config(function($routeProvider){
-	$routeProvider
-			.when("/main", {
-				templateUrl : "main.html"
-				})
-			.when("/info",{
-				templateUrl : "apps/info.html"
-				})
-			.when("/price",{
-				templateUrl : "apps/info.html"
-				})
-			.when("/help", {
-				templateUrl : "main.html"
-				});
-	});
+'use strict';
+ var app = angular.module("myApp", ["ngRoute"]);
+		app.config(function($routeProvider) {
+		  $routeProvider
+		  .when("/main", {
+			templateUrl : "main.html",
+			   controllerAs: 'hn'
+		  })
+		  .when("/info", {
+			templateUrl : "apps/info.html",
+			   controllerAs: 'hn'
+		  });
+		});
+
+   
