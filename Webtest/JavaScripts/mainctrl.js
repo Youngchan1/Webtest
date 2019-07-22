@@ -26,32 +26,28 @@ angular
 			}
 		}
 		$scope.firstName = "John";
-    	$scope.lastName = "Doe";
+    	$scope.lastName  = "Doe";
 	
 		self.viewpage = viewpagehn;
 		$scope.mainview = true;
 		function viewpagehn(a){// eslint-disable-line no-unused-vars
 			var strtext = $(a).text();
-			console.log("ga");
+			console.log(strtext);
 			if(strtext == "HOME"){
-				mainview = true;
-				console.log(mainview);
-				
+				$scope.mainview = true;
 			}else if(strtext == "INFO"){
-				mainview = false;  
+				$scope.mainview = false;  
 			}else if(strtext == "PRICE"){
-				mainview = false;
+				$scope.mainview = false;
 			}else if(strtext == "HELP"){
-				mainview = false;
+				$scope.mainview = false;
 			}
 		}
 
-		function mainview(){
-			 $location.url('/Main');
-		}
 		$(document).ready(function() {
 		
 		var $sidebar = $('.sidebar');
+			
 		var $sidebarButton = $sidebar.find('button').on('click', function(){
 			$sidebar.toggleClass('open');
 			if($sidebar.hasClass('open')){
@@ -60,7 +56,7 @@ angular
 				$sidebarButton.find('span').text('CLOSE');
 			}else{
 				console.log("1");
-				$sidebar.stop(true).animate({left: '-300px'},1500);
+				$sidebar.stop(true).animate({left: '-230px'},1500);
 				$sidebarButton.find('span').text('OPEN');
 			}
 		});

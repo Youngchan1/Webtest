@@ -38,7 +38,7 @@
 
 
 </head>
-<body ng-controller="MainCtrl as hn">
+<body ng-controller="MainCtrl as vm">
 	<div class="test" ng-show="mainview">
 	<div  class="logo"><img class="logoimg" src="img/현대 로고.png" alt="로고" width="150px;"></div>
 	</div>
@@ -50,10 +50,10 @@
         <div class="sidebar-content sidebermenu">
             <nav class="sidenav">
             	<ul>
-            		<li><a class="sidebtn" onClick="viewpage()" href="#!home">HOME</a></li>
-					<li><a  class="sidebtn" onClick="viewpage()" href="#!info">INFO</a></li>
-					<li><a  class="sidebtn" onClick="viewpage()" href="#!home">PRICE</a></li>
-					<li><a  class="sidebtn" onClick="viewpage()" href="#!info">HELP</a></li>
+            		<li><a onClick="viewpage(this)" href="#!home">HOME</a></li>
+					<li><a onClick="viewpage(this)" href="#!info">INFO</a></li>
+					<li><a onClick="viewpage(this)" href="#!price">PRICE</a></li>
+					<li><a onClick="viewpage(this)" href="#!help">HELP</a></li>
             	</ul>
             </nav>
         </div>

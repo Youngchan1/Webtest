@@ -8,11 +8,19 @@
 		  $routeProvider
 		  .when("/main", {
 			templateUrl : "main.html",
-			   controllerAs: 'hn'
+			controllerAs: 'vm'
 		  })
 		  .when("/info", {
 			templateUrl : "apps/info.html",
-			   controllerAs: 'hn'
+			controllerAs: 'vm'
+		  })
+		  .when("/price", {
+			templateUrl : "apps/price.html",
+			controllerAs: 'vm'
+		  })
+		  .when("/help", {
+			templateUrl : "apps/help.html",
+			controllerAs: 'vm'
 		  });
 		});
 
