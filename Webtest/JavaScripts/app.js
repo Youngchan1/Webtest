@@ -7,11 +7,12 @@
 		app.config(function($routeProvider) {
 		  $routeProvider
 		  .when("/main", {
+			controller: 'MainCtrl',
 			templateUrl : "main.html",
 			controllerAs: 'vm'
 		  })
 		  .when("/info", {
-			templateUrl : "apps/info.html",
+			templateUrl : "apps/info.html",  
 			controllerAs: 'vm'
 		  })
 		  .when("/price", {

@@ -13,6 +13,8 @@ angular
 	
 		var filter = "win16|win32|win64|mac";
 		var isPC = false;
+							
+		var $sidebar = $('.sidebar');
 		if(navigator.platform){
 
 		if(0 > filter.indexOf(navigator.platform.toLowerCase())){
@@ -27,7 +29,22 @@ angular
 		}
 		$scope.firstName = "John";
     	$scope.lastName  = "Doe";
-	
+		$(document).ready(function() {
+			
+		$scope.sidebarButton = $sidebar.find('button').on('click', function(){
+			console.log($scope.sidebarButton);
+			$sidebar.toggleClass('open');
+			if($sidebar.hasClass('open')){
+				console.log("2");
+				$sidebar.stop(true).animate({left: '-70px'},1000);
+				$scope.sidebarButton.find('span').text('CLOSE');
+			}else{
+				console.log("1");
+				$sidebar.stop(true).animate({left: '-230px'},1500);
+				$scope.sidebarButton.find('span').text('OPEN');
+			}
+		});
+	});
 		self.viewpage = viewpagehn;
 		$scope.mainview = true;
 		function viewpagehn(a){// eslint-disable-line no-unused-vars
@@ -41,26 +58,14 @@ angular
 				$scope.mainview = false;
 			}else if(strtext == "HELP"){
 				$scope.mainview = false;
+				
 			}
+			$sidebar.toggleClass('open');
+			$sidebar.stop(true).animate({left: '-230px'},1500);
+			$scope.sidebarButton.find('span').text('OPEN');
 		}
 
-		$(document).ready(function() {
-		
-		var $sidebar = $('.sidebar');
-			
-		var $sidebarButton = $sidebar.find('button').on('click', function(){
-			$sidebar.toggleClass('open');
-			if($sidebar.hasClass('open')){
-				console.log("2");
-				$sidebar.stop(true).animate({left: '-70px'},1000);
-				$sidebarButton.find('span').text('CLOSE');
-			}else{
-				console.log("1");
-				$sidebar.stop(true).animate({left: '-230px'},1500);
-				$sidebarButton.find('span').text('OPEN');
-			}
-		});
-	});
+
 			$(function(){
 			$('.test').vegas({
 				slides:[
