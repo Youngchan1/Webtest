@@ -7,10 +7,16 @@
 angular
 .module('myApp')
 .controller('MainCtrl', ['$http'
-                       , '$scope'
+                       , '$scope',
+                         '$location'
                         , function ($http
-                                 , $scope) {
-	
+                                 , $scope,
+                                   $location) {
+		var self = this;
+		self.homeview = homeviewhandlar;
+		self.infoview = infoviewhandlar;
+        self.priceview = priceviewwhandlar;
+		self.helpview = helpviewhandlar;     
 		var filter = "win16|win32|win64|mac";
 		var isPC = false;
 							
@@ -45,9 +51,9 @@ angular
 			}
 		});
 	});
-		self.viewpage = viewpagehn;
+		/*self.viewpage = viewpagehn;*/
 		$scope.mainview = true;
-		function viewpagehn(a){// eslint-disable-line no-unused-vars
+		/*function viewpagehn(a){// eslint-disable-line no-unused-vars
 			var strtext = $(a).text();
 			console.log(strtext);
 			if(strtext == "HOME"){
@@ -63,9 +69,32 @@ angular
 			$sidebar.toggleClass('open');
 			$sidebar.stop(true).animate({left: '-230px'},1500);
 			$scope.sidebarButton.find('span').text('OPEN');
-		}
-
-
+		}*/
+            function closesidebar(){
+                $sidebar.toggleClass('open');
+                $sidebar.stop(true).animate({left: '-230px'},1500);
+                $scope.sidebarButton.find('span').text('OPEN');
+            }
+            function homeviewhandlar(){
+                $location.url('/home');
+                $scope.mainview = true;
+                closesidebar();
+            }
+            function infoviewhandlar(){
+                $location.url('/info');
+                $scope.mainview = false;
+                closesidebar();
+            }
+            function priceviewwhandlar(){
+                $location.url('/price');
+                $scope.mainview = false;
+                closesidebar();
+            }
+            function helpviewhandlar(){
+                $location.url('/help');
+                $scope.mainview = false;
+                closesidebar();
+            }
 			$(function(){
 			$('.test').vegas({
 				slides:[
