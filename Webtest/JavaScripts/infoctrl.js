@@ -3,29 +3,36 @@
 /*eslint no-undef: "error"*/
 /*eslint-env node*/
 /* eslint-disable */
-function plusSlides(n) {
+'use strict';
+angular
+.module('myApp')
+.controller('infoCtrl', ['$http'
+                       , '$scope'
+					   , '$location'
+                       , function ($http
+                                 , $scope
+						   		 , $location) {
+console.log("시작");
+var slideIndex = 1;
+                            
+showSlides(slideIndex);
 
-  showSlides(slideIndex += n);
-
-}
-
-function currentSlide(n) {
-
-  showSlides(slideIndex = n);
-
-}
 
 function showSlides(n) {
-
+  console.log("슬라이드");
   var i;
 
   var slides = document.getElementsByClassName("mySlides");
-
+  console.log(slides);
   var dots = document.getElementsByClassName("dot");
 
-  if (n > slides.length) {slideIndex = 1}
+  if (n > slides.length) {
+      slideIndex = 1
+  }
 
-  if (n < 1) {slideIndex = slides.length}
+  if (n < 1) {
+      slideIndex = slides.length
+  }
 
   for (i = 0; i < slides.length; i++) {
 
@@ -44,3 +51,4 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 
 }
+}]);

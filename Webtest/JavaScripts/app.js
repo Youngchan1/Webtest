@@ -12,7 +12,7 @@
 			controllerAs: 'vm'
 		  })
 		  .when("/info", {
-			/*controller: 'infoCtrl',*/
+			controller: 'infoCtrl',
 			templateUrl : "apps/info.html",  
 			controllerAs: 'vm'
 		  })
