@@ -13,11 +13,13 @@ angular
                                  , $scope,
                                    $location) {
 		var self = this;
+                            
 		self.homeview = homeviewhandlar;
 		self.infoview = infoviewhandlar;
         self.priceview = priceviewwhandlar;
 		self.helpview = helpviewhandlar;     
 		var filter = "win16|win32|win64|mac";
+        $scope.mainview = true;                   
 		var isPC = false;
 							
 		var $sidebar = $('.sidebar');
@@ -52,7 +54,7 @@ angular
 		});
 	});
 		/*self.viewpage = viewpagehn;*/
-		$scope.mainview = true;
+		
 		/*function viewpagehn(a){// eslint-disable-line no-unused-vars
 			var strtext = $(a).text();
 			console.log(strtext);
