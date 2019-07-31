@@ -35,6 +35,16 @@ angular
 			
 			}
 		}
+		$(document).ready(function(){
+	
+		   $('.container').hide(); //첫 시작시 로딩바를 숨겨준다.
+		})
+		.ajaxStart(function(){
+			$('.container').show(); //ajax실행시 로딩바를 보여준다.
+		})
+		.ajaxStop(function(){
+			$('.container').hide(); //ajax종료시 로딩바를 숨겨준다.
+		});
 		$scope.firstName = "John";
     	$scope.lastName  = "Doe";
 		$(document).ready(function() {
