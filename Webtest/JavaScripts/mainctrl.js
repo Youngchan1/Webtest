@@ -107,12 +107,26 @@ angular
                 $scope.mainview = false;
                 closesidebar();
             }
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+			  myIndex++;
+			  if (myIndex > x.length) {myIndex = 1}    
+			  x[myIndex-1].style.display = "block";  
+			  setTimeout(carousel, 6100); // Change image every 2 seconds
+			}
 			$(function(){
 			$('.test').vegas({
 				slides:[
-					{src : 'img/main1.jpg'},
-					{src : 'img/main2.jpg'},
-					{src : 'img/main3.jpg'}
+					{src : '../img/Main/GrandCeanun.jpg'},
+					{src : '../img/main/Orora.jpg'},
+					{src : '../img/main/Naiagara.jpg'}
 					
 				],delay : 6000})
 			});
