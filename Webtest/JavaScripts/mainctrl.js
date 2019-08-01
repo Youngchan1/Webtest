@@ -119,15 +119,17 @@ angular
 			  myIndex++;
 			  if (myIndex > x.length) {myIndex = 1}    
 			  x[myIndex-1].style.display = "block";  
-			  setTimeout(carousel, 6100); // Change image every 2 seconds
+			  setTimeout(carousel, 6000); // Change image every 2 seconds
+              
+			
 			}
-			$(function(){
-			$('.test').vegas({
-				slides:[
-					{src : '../img/Main/GrandCeanun.jpg'},
-					{src : '../img/main/Orora.jpg'},
-					{src : '../img/main/Naiagara.jpg'}
-					
-				],delay : 6000})
-			});
+							  
+			   $('.test').vegas({
+                   
+                    slides:[
+                        {src : '/Webtest/img/Main/GrandCeanun.jpg'},
+                        {src : '/Webtest/img/main/Orora.jpg'},
+                        {src : '/Webtest/img/main/Naiagara.jpg'}
+
+				], transition: ['fade', 'zoomOut'],delay : 5870})
 }]);
