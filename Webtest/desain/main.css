@@ -70,6 +70,7 @@ button .sidebar-btn {
   content: '';
   border-bottom: solid 1px black;
   border-right: solid 1px black;
+  border-left: solid 1px black;
   position: absolute;
   bottom: 0;
   width: 0;
@@ -80,18 +81,19 @@ button .sidebar-btn {
 .link-1 a:after { right : 0; }
 
 .link-1 a:hover:before {
-  border-bottom:  solid 1px #F50105;
+  border-bottom:  solid 1px yellow;
+  border-top: solid 1px yellow;
   width: 100%;
 }
 .link-1 a:hover:after {
-  border-right:  solid 1px #F50105;
+  border-right:  solid 1px yellow;
   height: 80%;
 }
 .link-1 a:after{
    transition: all 1s ease;
 }
 .link-1 a:before{
-          transition: all 1s ease;
+   transition: all 1s ease;
 }
 
 
@@ -179,180 +181,41 @@ button .sidebar-btn {
 
 /*--------------------------------------------------------------------------*/
 
-.mySlides {
-    display: none;
-	font-family: 'PatrickHand';
-    position: absolute;
-    bottom: 50px;
-    right: 20px;
-    color : black;
-    padding: 0px 10px;
-    max-width: 500px;
-	font-size: 20px;
-    background-color:  rgba(0,0,0,0.4);
-    box-shadow: 5px 5px 20px black inset;
-}
-
-.mySlides > a {
-	text-align: center;
-}
-
-.fade-in {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fadeIn;
-   animation: fadeIn 3s ease;
-}
-@keyframes fadeIn{
-    0% {
-        opacity:0;
+ .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
-  /*  20%{
-        opacity:0.2;
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
     }
-    40%{
-        opacity:0.4; 
-    }*/
-    60%{
-        opacity:0.6; 
+    .swiper-pagination{
+    	left:20px;
     }
-    80%{
-        opacity:0.8;  
-    }
-    100% {
-        opacity:1;
-    }
-}
-
-.mySlides >img {
-    vertical-align: middle;
-    width: 100%;
-    height: 700px;
-}
-/* Slideshow container */
-.slideshow-container {
-  max-width: 100%;
-  max-height: 700px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-
-/*Loding*/
-.shadow{
-  width:60px;
-  height:4px;
-  background-color:rgba(0,0,0,.1);
-  border-radius:3px;
-  animation:shadow 5s ease-in-out infinite;
-  margin:auto;
-  position:absolute;
-  bottom:-4px;
-  left:0;
-  right:0;
-  
-}
-
-@keyframes shadow{
-  0%{
-    width:60px;
-  }
-  10%{
-    width:10px;
-  }
-  20%{
-    width:60px;
-  }
-  30%{
-    width:10px;
-  }
-  40%{
-    width:60px;
-  }
-  50%{
-    width:10px;
-  }
-  60%{
-    width:60px;
-  }
-  70%{
-    width:10px;
-  }
-  92%{
-    width:10px;
-  }
-  100%{
-    width:60px;
-  }
-}
+	.swiper-pagination-bullet {
+		width: 15px;
+		height: 15px;
+		fill: .5;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: #ECEB08;
+	}
 
 
 .logo{
@@ -515,7 +378,7 @@ button .sidebar-btn {
 }
 
 .footer {
-	position: relative;
+	position: absolute;
 	bottom: 0;
 	width: 100%;
 	z-index: 999;
@@ -530,19 +393,19 @@ button .sidebar-btn {
 }
 
 .img1 {
-   position: relative;
-   margin: auto;
-   top : 10%;
+	background-image: url("../img/Main/GrandCeanun.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 
 .img2 {
-    position: relative;
-    margin: auto;
-    top : 40%;
+	background-image: url("../img/Main/Naiagara.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
 
 .img3 {
-    position: relative;
-    margin: auto;
-    top: 70%;
+    background-image: url("../img/Main/Orora.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }

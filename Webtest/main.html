@@ -31,6 +31,9 @@
 	<script src="vegas/vegas.min.js"></script>
 	<link rel="stylesheet" href="vegas/vegas.min.css">
 
+    <!--Swiper css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
 	
 	<!--local CSS and JS-->
 	<link rel="stylesheet" href="desain/main.css">
@@ -71,12 +74,14 @@
 		</div>
 	</div>
 	<div class="test" ng-show="mainview">
-		<div class="slidetext">
-		  <div class="mySlides"><h1>Grand Canyon</h1><a>English - The Grand Canyon is 277 miles (446 km) long, up to 18 miles (29 km) wide and attains a depth of over a mile (6,093 feet or 1,857 meters).</a><br>
+        <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide img1"><a>Slide 1</a></div>
+                    <div class="swiper-slide img2">Slide 2</div>
+                    <div class="swiper-slide img3">Slide 3</div>
             </div>
-		  <div class="mySlides" style="width:400px; height:100px; "><h1>aurora</h1></div>
-		  <div class="mySlides" style="width:400px; height:100px; "><h1>Niagara Falls</h1></div>
-		</div>
+               <div class="swiper-pagination"></div>
+        </div>
 	</div>
 	<ng-view></ng-view>
 	
@@ -99,6 +104,10 @@
 		
 	</div>
 </body>
+    <!--Swiper JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    
     <!--viwe controller-->
     <script src="JavaScripts/infoctrl.js"></script>
     <script src="JavaScripts/mainctrl.js"></script>

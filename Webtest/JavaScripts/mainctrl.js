@@ -62,6 +62,25 @@ angular
 				$scope.sidebarButton.find('span').text('OPEN');
 			}
 		});
+			var swiper = new Swiper('.swiper-container', {
+				effect: "fade",
+                 grabCursor : true,
+                    direction: 'vertical',
+                    slidesPerView: 1,
+					loop : true,
+					autoplay: {
+						delay: 500,
+						stopOnLastSlide : false,
+						waitForTransition : false,
+					},
+                    spaceBetween: 30,
+                    mousewheel: true,
+                    pagination: {
+                      el: '.swiper-pagination',
+                      clickable: true,
+                    },
+				
+            });   
 	});
 		/*self.viewpage = viewpagehn;*/
 		
@@ -107,7 +126,13 @@ angular
                 $scope.mainview = false;
                 closesidebar();
             }
-			var myIndex = 0;
+                         
+                            
+                            
+                            
+                            
+                            
+/*			var myIndex = 0;
 			carousel();
 
 			function carousel() {
@@ -122,8 +147,8 @@ angular
 			  setTimeout(carousel, 6000); // Change image every 2 seconds
               
 			
-			}
-							  
+			}*/
+			/*				  
 			   $('.test').vegas({
                    
                     slides:[
@@ -131,5 +156,5 @@ angular
                         {src : '/Webtest/img/main/Orora.jpg'},
                         {src : '/Webtest/img/main/Naiagara.jpg'}
 
-				], transition: ['fade', 'zoomOut'],delay : 5870})
+				], transition: ['fade', 'zoomOut'],delay : 5870})*/
 }]);
