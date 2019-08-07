@@ -48,8 +48,10 @@ angular
 		$scope.firstName = "John";
     	$scope.lastName  = "Doe";
 		$(document).ready(function() {
+
 			
-		$scope.sidebarButton = $sidebar.find('button').on('click', function(){
+		/*leftsidebar*/
+		/*$scope.sidebarButton = $sidebar.find('button').on('click', function(){
 			console.log($scope.sidebarButton);
 			$sidebar.toggleClass('open');
 			if($sidebar.hasClass('open')){
@@ -61,27 +63,28 @@ angular
 				$sidebar.stop(true).animate({left: '-230px'},1500);
 				$scope.sidebarButton.find('span').text('OPEN');
 			}
-		});
+		});*/
 			var swiper = new Swiper('.swiper-container', {
-				effect: "fade",
-                 grabCursor : true,
-                    direction: 'vertical',
+					effect: "fade",
+					grabCursor : true,
+                    direction: 'horizontal',
                     slidesPerView: 1,
 					loop : true,
 					autoplay: {
-						delay: 500,
+						delay: 2000,
 						stopOnLastSlide : false,
 						waitForTransition : false,
 					},
-                    spaceBetween: 30,
-                    mousewheel: true,
+                    spaceBetween: 200,
+					slidesPerView : 3,
                     pagination: {
                       el: '.swiper-pagination',
+					  dynamicBullets: true,
                       clickable: true,
                     },
 				
-            });   
-	});
+            });
+				});
 		/*self.viewpage = viewpagehn;*/
 		
 		/*function viewpagehn(a){// eslint-disable-line no-unused-vars

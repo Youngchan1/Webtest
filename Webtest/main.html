@@ -38,50 +38,77 @@
 	<!--local CSS and JS-->
 	<link rel="stylesheet" href="desain/main.css">
 	<script src="JavaScripts/app.js"></script>
+	<script src="JavaScripts/topmenu.js"></script>
 	
 </head>
 <body ng-controller="MainCtrl as vm">
-	<!--로딩화면출력-->
-	<div class="container">
-	  <div class="circle"></div>
-	  <div class="square"></div>
-	  <div class="triangle"></div>
-	  <div class="logo">Pixmy</div>
-	  <div class="shadow"></div>
-	</div>
+
 	
-	<div class="Topside">
+	<div class="Topside nav-down">
 	<div  class="mainlogo">Trip</div>
 		<div class="Topmenu">
 		<ul>
 		  <li class="link-1">
-			<a href="#">Home
+			<a ng-Click="vm.homeview()" style="color: white;">Home
 			</a>    
 		  </li>
 		  <li class="link-1">
-			<a href="#">Info
+			<a ng-Click="vm.infoview()" style="color: white;">Info
 			</a>    
 		  </li>
 		  <li class="link-1">
-			<a href="#">Country
+			<a ng-Click="vm.priceview()" style="color: white;">Country
 			</a>    
 		  </li>
 		  <li class="link-1">
-			<a href="#">Help
+			<a ng-Click="vm.helpview()" style="color: white;">Help
 			</a>    
 		  </li>
 		</ul>
 		</div>
 	</div>
+	
 	<div class="test" ng-show="mainview">
         <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide img1"><a>Slide 1</a></div>
+                    <div class="swiper-slide img1">Slide 1</div>
                     <div class="swiper-slide img2">Slide 2</div>
                     <div class="swiper-slide img3">Slide 3</div>
             </div>
                <div class="swiper-pagination"></div>
-        </div>
+		</div>
+		<div class="maininfo">
+			<h1>Trip info</h1>
+			<a>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum sequi fuga quod voluptatem explicabo, corporis itaque, fugiat culpa reprehenderit numquam, quibusdam ipsam.</a>
+		</div>
+		<div class="Secen">
+		<div class="Cebu Cimg4">
+			<div class="KrText hideme">
+				Korea
+			</div>		
+		</div>
+		</div>
+		<div class="Secen">
+		<div class="Cebu Cimg1">
+			<div class="CebuText hideme">
+				Cebu
+			</div>		
+		</div>
+		</div>
+		<div class="Secen">
+		<div class="Cebu Cimg2">
+			<div class="MexText hideme">
+				Mexico
+			</div>	
+		</div>		
+		</div>
+		<div class="Secen">
+		<div class="Cebu Cimg3">
+			<div class="JpText hideme">
+				Jepen
+			</div>	
+		</div>
+		</div>
 	</div>
 	<ng-view></ng-view>
 	
