@@ -37,6 +37,7 @@
 	
 	<!--local CSS and JS-->
 	<link rel="stylesheet" href="desain/main.css">
+	<link rel="stylesheet" href="desain/info.css">
 	<script src="JavaScripts/app.js"></script>
 	<script src="JavaScripts/topmenu.js"></script>
 	
@@ -67,7 +68,21 @@
 		</ul>
 		</div>
 	</div>
-	
+	<div ng-show="brochk">
+		<aside class="sidebar">
+        <div class="sidebar-content sidebermenu">
+            <nav class="sidenav">
+            	<ul>
+            		<li><a ng-Click="vm.homeview()">HOME</a></li>
+					<li><a ng-Click="vm.infoview()">INFO</a></li>
+					<li><a ng-Click="vm.priceview()">PRICE</a></li>
+					<li><a ng-Click="vm.helpview()">HELP</a></li>
+            	</ul>
+            </nav>
+        </div>
+        <button class="sid-btn"><span class="sidebar-btn">OPEN</span></button>
+    </aside>
+	</div>
 	<div class="test" ng-show="mainview">
         <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -114,20 +129,8 @@
 	
 	
 	
-<!--	<aside class="sidebar">
-        <div class="sidebar-content sidebermenu">
-            <nav class="sidenav">
-            	<ul>
-            		<li><a ng-Click="vm.homeview()">HOME</a></li>
-					<li><a ng-Click="vm.infoview()">INFO</a></li>
-					<li><a ng-Click="vm.priceview()">PRICE</a></li>
-					<li><a ng-Click="vm.helpview()">HELP</a></li>
-            	</ul>
-            </nav>
-        </div>
-        <button><span class="sidebar-btn">OPEN</span></button>
-    </aside>-->
-	<div class="footer">
+
+	<div class="footer footer-up">
 		
 	</div>
 </body>

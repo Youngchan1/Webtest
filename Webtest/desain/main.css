@@ -20,15 +20,813 @@
 @font-face{font-family:'PatrickHand'; src:url('../font/PatrickHand-Regular.ttf')}
 @font-face{font-family:'Comfortaa'; src:url('../font/Comfortaa-Medium.ttf')}
 /*@font-face{font-family:''; src:url('../font/')}*/
-
-
-
-
+@media (min-width:801px) and (max-width: 1440px) {
+		
 body {
 	/*background-image: url("../img/main3.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;*/
 	margin: 0;
+	margin-top: 72px;
+}
+
+
+button {
+    outline: none;
+}
+button .sidebar-btn {
+    color: #fff;
+    font-weight: bold;
+}
+.Topmenu{
+	width: 420px;
+	height: 40px;
+	margin: 14px 0px 0px 0px;
+	float: right;
+}
+.Topmenu ul{
+	display: inline-flex;
+	list-style: none;
+	padding: 0;
+}
+.link-1 > a {
+	text-transform: uppercase;
+	font-family: 'PatrickHand';
+	font-size: 30px;
+	height: 40px;
+	color: white;
+	text-decoration: none;
+	position: relative;
+	padding-right : 5px;
+	margin: 0px 13px;
+}
+.link-1 a:before, .link-1 a:after {
+  content: '';
+  border-bottom: solid 1px black;
+  border-left: solid 1px black;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+}
+
+.link-1 a:before { left: 0; }
+.link-1 a:after { right : 0; }
+
+.link-1 a:hover:before {
+  border-bottom:  solid 1px yellow;
+  width: 100%;
+}
+.link-1 a:hover:after {
+  border-right:  solid 1px yellow;
+  height: 80%;
+}
+.link-1 a:after{
+   transition: all 1s ease;
+}
+.link-1 a:before{
+   transition: all 1s ease;
+}
+
+.hideme{
+    opacity:0;
+}
+	
+.sidebar {
+    background-color: #373636;
+    width: 230px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+	opacity: 0.9;
+    left: -230px;
+    z-index: 9999;
+}
+.sidebar-content {
+    position: absolute;
+    left: 17%;
+	color: #fff;
+}
+.sid-btn {
+    background-color: #373636;
+    display: block;
+    position: absolute;
+	z-index: 999;
+    top: 117px;
+    left: 230px;
+    width: 70px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+.header {
+	position: absolute;
+	width: 100%;
+	height: 100px;
+}
+
+.mainlogo {
+    position: absolute;
+	z-index: 999;
+	font-family: 'SairaStencilOne';
+	color: azure;
+	font-size: 50px;
+	margin-left: 15px;
+}
+
+
+.tophd {
+	position: absolute;
+	widows: 100%;
+	}
+
+.sidebermenu {
+	background-color: #000000;
+	margin: 0;
+	width: 65%;
+	position: absolute;
+	height: 100%;
+}	
+
+.sidenav > ul > li{
+		list-style-type: none;
+		margin: 40px 0px;
+}
+.sidenav > ul > li > a {
+	font-size: 32px;
+	color: white;
+	text-decoration: none;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"
+}
+
+.sidenav {
+	margin-top: 50%;
+}
+
+.test {
+	position: absolute;
+	width: 100%;
+	height: 88.52%;
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+ .swiper-container {
+        width: 100%;
+        height: 92%;
+	 	margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-pagination{
+		position: absolute;
+		width: 100%;
+    	left:20px;
+    }
+	.swiper-pagination-bullet {
+		width: 15px;
+		height: 15px;
+		opacity: 1;
+		background-color: #696F68;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: #ECEB08;
+	}
+
+
+.Topside {
+	position: fixed;
+	width: 100%;
+	z-index: 99;
+	height: 72px;
+    top: 0;
+    transition: top .5s ease-in-out;
+	background-color: #0E0E0E;
+}
+
+.nav-up{
+	top: -72px;
+}
+.footer-down{
+	bottom: -77px !important;
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 999;
+	height: 77px;
+	transition: bottom .5s ease-in-out;
+	background-color: black;
+}
+
+.slidetext {
+	position: relative;
+	width: 100%;
+    height: 100%;
+}
+
+.img1 {
+	background-image: url("../img/Main/GrandCeanun.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.img2 {
+	background-image: url("../img/Main/Naiagara.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.img3 {
+    background-image: url("../img/Main/Orora.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.maincontainer {
+	position : relative;
+	height: 100vh;
+	width : 500px;
+	left : 20%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin-bottom : 20px;
+}
+.cebu {
+	position : relative;
+	height: 700px;
+	width : 600px;
+	left : 22%;
+	background-repeat: no-repeat;
+}
+
+.maxcio {
+	position : relative;
+	height: 100%;
+	width : 100%;
+	pointer-events: none;
+	background-color: aqua;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	
+	clip: rect(auto,auto,auto,auto);
+	overflow: hidden;
+	margin-bottom : 20px;
+}
+
+.maininfo {
+	position: relative;
+	max-width: 900px;
+	height: 150px;
+	margin: 3% auto;
+	text-align: center;
+}
+
+.banner {
+	background-image: url("../img/Cebu/Cebu6.jpg");
+}
+
+.bnrcont {
+	width: 100%;
+	max-height: 200px;
+	margin: 4% 0%;
+}
+
+.sestion {
+	width: 100%;
+	height: 100vh;
+}
+
+.Cebu {
+	width:100%;
+	height:100%;
+	text-align: center;
+	margin: 5% 0;
+}
+
+.Secen {
+	position: relative;
+	margin: auto;
+	width: 90%;
+	height: 100%;
+}
+
+
+.Cimg1 {
+	background-image: url("../img/Cebu/Cebu9.jpg");
+	background-position: center;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-size : 100%;
+}
+
+.Cimg2 {
+	background-image: url('../img/Maxico/Mac8.jpg');
+	background-position: center;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-size : 100%;
+}
+
+.Cimg3 {
+	background-image: url('../img/Jepen/JP2.jpg');
+	background-position: center;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-size : 100%;
+}
+
+.Cimg4 {
+	background-image: url("../img/Korea/KR1.jpg");
+	background-position: center;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-size : 100%;	
+}
+
+.CebuText {
+	position: absolute;
+	font-family: 'ShadowsIntoLightTwo';
+	right: 8%;
+	top : 50%;
+	padding: 0 3rem;
+	font-size: 4.6rem;
+	background-color: rgba(0,0,0,0.3);
+	border: 1px solid rgba(255,255,255,0.3);
+	color: #fff;
+}
+	
+.KrText {
+	position: absolute;
+	font-family: 'IndieFlower';
+	padding: 0 3rem;
+	font-size: 4.6rem;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(0,0,0,0.3);
+	border: 1px solid rgba(255,255,255,0.3);
+	color: #fff;
+}
+
+
+.MexText {
+	position: absolute;
+	font-family: 'LiuJianMaoCao';
+	right: 50%;
+	top : 10%;
+	padding: 0 3rem;
+	font-size: 4.6rem;
+	background-color: rgba(0,0,0,0.3);
+	border: 1px solid rgba(255,255,255,0.3);
+	color: #fff;
+	
+}
+
+.JpText {
+	position: absolute;
+	font-family: 'ReenieBeanie';
+	left: 8%;
+	top : 50%;
+	padding: 0 3rem;
+	font-size: 4.6rem;
+	background-color: rgba(0,0,0,0.3);
+	border: 1px solid rgba(255,255,255,0.3);
+	color: #fff;
+	
+}
+}
+@media (min-width:1445px) and (max-width: 1920px){
+		
+body {
+	/*background-image: url("../img/main3.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;*/
+	margin: 0;
+	margin-top: 72px;
+}
+
+
+button {
+    outline: none;
+}
+button .sidebar-btn {
+    color: #fff;
+    font-weight: bold;
+}
+.Topmenu{
+	width: 420px;
+	height: 40px;
+	margin: 14px 0px 0px 0px;
+	float: right;
+}
+.Topmenu ul{
+	display: inline-flex;
+	list-style: none;
+	padding: 0;
+}
+.link-1 > a {
+	text-transform: uppercase;
+	font-family: 'PatrickHand';
+	font-size: 30px;
+	height: 40px;
+	color: white;
+	text-decoration: none;
+	position: relative;
+	padding-right : 5px;
+	margin: 0px 13px;
+}
+.link-1 a:before, .link-1 a:after {
+  content: '';
+  border-bottom: solid 1px black;
+  border-left: solid 1px black;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+}
+
+.link-1 a:before { left: 0; }
+.link-1 a:after { right : 0; }
+
+.link-1 a:hover:before {
+  border-bottom:  solid 1px yellow;
+  width: 100%;
+}
+.link-1 a:hover:after {
+  border-right:  solid 1px yellow;
+  height: 80%;
+}
+.link-1 a:after{
+   transition: all 1s ease;
+}
+.link-1 a:before{
+   transition: all 1s ease;
+}
+
+.hideme{
+    opacity:0;
+}
+	/*
+.sidebar {
+    background-color: #373636;
+    width: 230px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+	opacity: 0.9;
+    left: -230px;
+    z-index: 9999;
+}
+.sidebar-content {
+    position: absolute;
+    left: 17%;
+	color: #fff;
+}
+.sidebar button {
+    background-color: #373636;
+    display: block;
+    position: absolute;
+    top: 117px;
+    left: 230px;
+    width: 70px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+*/
+
+.header {
+	position: absolute;
+	width: 100%;
+	height: 100px;
+}
+
+.mainlogo {
+    position: absolute;
+	z-index: 999;
+	font-family: 'SairaStencilOne';
+	color: azure;
+	font-size: 50px;
+	margin-left: 15px;
+}
+
+
+.tophd {
+	position: absolute;
+	widows: 100%;
+	}
+
+.sidebermenu {
+	background-color: #000000;
+	margin: 0;
+	width: 65%;
+	position: absolute;
+	height: 100%;
+}	
+
+.sidenav > ul > li{
+		list-style-type: none;
+		margin: 40px 0px;
+}
+.sidenav > ul > li > a {
+	font-size: 32px;
+	color: white;
+	text-decoration: none;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"
+}
+
+.sidenav {
+	margin-top: 50%;
+}
+
+.test {
+	position: absolute;
+	width: 100%;
+	height: 88.52%;
+}
+
+
+/*--------------------------------------------------------------------------*/
+
+ .swiper-container {
+        width: 100%;
+        height: 98%;
+	 	margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-pagination{
+		position: absolute;
+		width: 100%;
+    	left:20px;
+    }
+	.swiper-pagination-bullet {
+		width: 15px;
+		height: 15px;
+		opacity: 1;
+		background-color: #696F68;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: #ECEB08;
+	}
+
+
+.Topside {
+	position: fixed;
+	width: 100%;
+	z-index: 99;
+	height: 72px;
+    top: 0;
+    transition: top .5s ease-in-out;
+	background-color: #0E0E0E;
+}
+
+.nav-up{
+	top: -72px;
+}
+.footer-down{
+	bottom: -77px !important;
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 999;
+	height: 77px;
+	transition: bottom .5s ease-in-out;
+	background-color: black;
+}
+
+.slidetext {
+	position: relative;
+	width: 100%;
+    height: 100%;
+}
+
+.img1 {
+	background-image: url("../img/Main/GrandCeanun.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.img2 {
+	background-image: url("../img/Main/Naiagara.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.img3 {
+    background-image: url("../img/Main/Orora.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.maincontainer {
+	position : relative;
+	height: 100vh;
+	width : 500px;
+	left : 20%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	margin-bottom : 20px;
+}
+.cebu {
+	position : relative;
+	height: 700px;
+	width : 600px;
+	left : 22%;
+	background-repeat: no-repeat;
+}
+
+.maxcio {
+	position : relative;
+	height: 100%;
+	width : 100%;
+	pointer-events: none;
+	background-color: aqua;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	
+	clip: rect(auto,auto,auto,auto);
+	overflow: hidden;
+	margin-bottom : 20px;
+}
+
+.maininfo {
+	position: relative;
+	max-width: 900px;
+	height: 150px;
+	margin: 3% auto;
+	text-align: center;
+}
+
+.banner {
+	background-image: url("../img/Cebu/Cebu6.jpg");
+}
+
+.bnrcont {
+	width: 100%;
+	max-height: 200px;
+	margin: 4% 0%;
+}
+
+.sestion {
+	width: 100%;
+	height: 100vh;
+}
+
+.Cebu {
+	width:100%;
+	height:100%;
+	text-align: center;
+	margin: 5% 0;
+}
+
+.Secen {
+	position: relative;
+	margin: auto;
+	width: 90%;
+	height: 100%;
+}
+
+
+.Cimg1 {
+	background-image: url("../img/Cebu/Cebu9.jpg");
+	background-position: center;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-size : 100%;
+}
+
+.Cimg2 {
+	background-image: url('../img/Maxico/Mac8.jpg');
+	background-position: center;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-size : 100%;
+}
+
+.Cimg3 {
+	background-image: url('../img/Jepen/JP2.jpg');
+	background-position: center;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-size : 100%;
+}
+
+.Cimg4 {
+	background-image: url("../img/Korea/KR1.jpg");
+	background-position: center;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-size : 100%;	
+}
+
+.CebuText {
+	position: absolute;
+	font-family: 'ShadowsIntoLightTwo';
+	right: 8%;
+	top : 50%;
+	padding: 0 3rem;
+	font-size: 5.5rem;
+	background-color: rgba(0,0,0,0.3);
+	border: 1px solid rgba(255,255,255,0.3);
+	color: #fff;
+}
+	
+.KrText {
+	position: absolute;
+	font-family: 'IndieFlower';
+	padding: 0 3rem;
+	font-size: 5.5rem;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(0,0,0,0.3);
+	border: 1px solid rgba(255,255,255,0.3);
+	color: #fff;
+}
+
+
+.MexText {
+	position: absolute;
+	font-family: 'LiuJianMaoCao';
+	right: 50%;
+	top : 10%;
+	padding: 0 3rem;
+	font-size: 5.5rem;
+	background-color: rgba(0,0,0,0.3);
+	border: 1px solid rgba(255,255,255,0.3);
+	color: #fff;
+	
+}
+
+.JpText {
+	position: absolute;
+	font-family: 'ReenieBeanie';
+	left: 8%;
+	top : 50%;
+	padding: 0 3rem;
+	font-size: 5.5rem;
+	background-color: rgba(0,0,0,0.3);
+	border: 1px solid rgba(255,255,255,0.3);
+	color: #fff;
+	
+}
+}
+@media (min-width:1921px) and (max-width: 2600px){
+	
+body {
+	/*background-image: url("../img/main3.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;*/
+	margin: 0;
+	margin-top: 72px;
 }
 
 
@@ -179,7 +977,6 @@ button .sidebar-btn {
  .swiper-container {
         width: 100%;
         height: 100%;
-	 	margin-top: 70px;
 	 	margin-left: auto;
         margin-right: auto;
     }
@@ -221,14 +1018,17 @@ button .sidebar-btn {
 	position: fixed;
 	width: 100%;
 	z-index: 99;
-	height: 70px;
+	height: 72px;
     top: 0;
     transition: top .5s ease-in-out;
 	background-color: #0E0E0E;
 }
 
 .nav-up{
-	top:-70px;
+	top: -72px;
+}
+.footer-down{
+	bottom: -77px !important;
 }
 .footer {
 	position: fixed;
@@ -236,6 +1036,7 @@ button .sidebar-btn {
 	width: 100%;
 	z-index: 999;
 	height: 77px;
+	transition: bottom .5s ease-in-out;
 	background-color: black;
 }
 
@@ -272,28 +1073,6 @@ button .sidebar-btn {
 	background-repeat: no-repeat;
 	margin-bottom : 20px;
 }
-
-.one {
-	background-image: url("../img/Cebu/Cebu5.jpg");
-}
-
-.two {
-	position: fixed;
-	top : 0;
-	backface-visibility: hidden;
-	will-change: transform;
-	width: 1500px;
-	height: 700px;
-	left : 30%;
-	z-index: -1;
-	background-image: url("../img/Maxico/Mac4.jpg");
-	transform: translate3d(0px,137px,0px);
-}
-
-.three {
-	background-image: url("../img/Cebu/Cebu4.jpg");
-}
-
 .cebu {
 	position : relative;
 	height: 700px;
@@ -344,36 +1123,6 @@ button .sidebar-btn {
 	height:100%;
 	text-align: center;
 	margin: 5% 0;
-}
-
-.b {
- 	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample96.jpg");
-	width:100%;
-	height:100%;
-	background-position: center;
-	background-attachment:fixed;
-	background-repeat: no-repeat;
-	background-size : 650px 700px;
-	color: white;
-}
-
-.c {
-	 background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample96.jpg");
-  width:100%;
-  height:100%;
-  background-position: 10% 50%;
-  background-attachment:fixed;
-  background-repeat: no-repeat;
-  background-size : 650px 700px;
-  color: white;
-  margin: 5% 0;
-}
-
-.a {
-	position: relative;
-	margin: auto;
-	width: 80%;
-	height: 80%;
 }
 
 .Secen {
@@ -466,3 +1215,6 @@ button .sidebar-btn {
 	color: #fff;
 	
 }
+
+}
+

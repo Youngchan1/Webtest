@@ -19,12 +19,13 @@ angular
         self.priceview = priceviewwhandlar;
 		self.helpview = helpviewhandlar;     
 		var filter = "win16|win32|win64|mac";
+		$scope.brochk = false;
         $scope.mainview = true;                   
 		var isPC = false;
 							
 		var $sidebar = $('.sidebar');
 		if(navigator.platform){
-
+		 		
 		if(0 > filter.indexOf(navigator.platform.toLowerCase())){
 		console.log("모바일");
 		isPC = false;
@@ -36,7 +37,7 @@ angular
 			}
 		}
 		$(document).ready(function(){
-	
+		Browser();  
 		   $('.container').hide(); //첫 시작시 로딩바를 숨겨준다.
 		})
 		.ajaxStart(function(){
@@ -51,7 +52,7 @@ angular
 
 			
 		/*leftsidebar*/
-		/*$scope.sidebarButton = $sidebar.find('button').on('click', function(){
+		$scope.sidebarButton = $sidebar.find('.sid-btn').on('click', function(){
 			console.log($scope.sidebarButton);
 			$sidebar.toggleClass('open');
 			if($sidebar.hasClass('open')){
@@ -63,7 +64,7 @@ angular
 				$sidebar.stop(true).animate({left: '-230px'},1500);
 				$scope.sidebarButton.find('span').text('OPEN');
 			}
-		});*/
+		});
 			var swiper = new Swiper('.swiper-container', {
 					effect: "fade",
 					grabCursor : true,
@@ -129,9 +130,17 @@ angular
                 $scope.mainview = false;
                 closesidebar();
             }
-                         
-                            
-                            
+                     
+            function Browser(){
+				
+			var windowWidth = $(window).width();
+				if(windowWidth > 0 && windowWidth < 971) {
+					$scope.brochk = true;
+				} else if(windowWidth > 972 && windowWidth < 2600) {
+					$scope.brochk = false;
+				}
+				console.log($scope.brochk);
+			}
                             
                             
                             
